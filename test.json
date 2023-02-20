@@ -1,0 +1,506 @@
+{
+  "definitions": {
+    "ActContent_t": {
+      "properties": {
+        "dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "employee_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "goods_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "goods_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "new_goods_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "nm_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "sku_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "Bool": {
+      "type": "boolean",
+      "x-go-package": "github.com/ondi/go-null"
+    },
+    "Box_t": {
+      "properties": {
+        "barcode": {
+          "$ref": "#/definitions/String"
+        },
+        "box_type": {
+          "$ref": "#/definitions/Int64"
+        },
+        "dst_office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "employee_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "excise_short": {
+          "$ref": "#/definitions/String"
+        },
+        "ext_rid": {
+          "$ref": "#/definitions/String"
+        },
+        "rid": {
+          "$ref": "#/definitions/Int64"
+        },
+        "sf_pack_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "shipping_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "shk_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "shk_type_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "transfer_box_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "transfer_box_sm_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "ttn_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "wbsticker_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "BoxList_t": {
+      "items": {
+        "$ref": "#/definitions/Box_t"
+      },
+      "type": "array",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "Int64": {
+      "type": "integer",
+      "x-go-package": "github.com/ondi/go-null"
+    },
+    "ShkProcessed_t": {
+      "properties": {
+        "employee_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "event_dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "shks_processed": {
+          "items": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "type": "array",
+          "x-go-name": "Shks_processed"
+        },
+        "tare_scan": {
+          "$ref": "#/definitions/String"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "ShkProcessedList_t": {
+      "items": {
+        "$ref": "#/definitions/ShkProcessed_t"
+      },
+      "type": "array",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "ShkProcessedV2List_t": {
+      "items": {
+        "$ref": "#/definitions/ShkProcessedV2_t"
+      },
+      "type": "array",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "ShkProcessedV2_t": {
+      "properties": {
+        "act_content": {
+          "items": {
+            "$ref": "#/definitions/ActContent_t"
+          },
+          "type": "array",
+          "x-go-name": "Act_content"
+        },
+        "dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "employee_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "place_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "src_office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "tare_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "tare_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "tare_type": {
+          "$ref": "#/definitions/String"
+        },
+        "wh_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "String": {
+      "type": "string",
+      "x-go-package": "github.com/ondi/go-null"
+    },
+    "StringPrice": {
+      "type": "number",
+      "x-go-package": "github.com/ondi/go-null"
+    },
+    "Tare_t": {
+      "properties": {
+        "office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "reported_dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "tare_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "tare_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "tare_type": {
+          "$ref": "#/definitions/String"
+        },
+        "unloaded_dt": {
+          "$ref": "#/definitions/Time"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareAttachment_t": {
+      "properties": {
+        "attachment_name": {
+          "$ref": "#/definitions/String"
+        },
+        "attachment_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "attachment_type": {
+          "$ref": "#/definitions/String"
+        },
+        "currency": {
+          "$ref": "#/definitions/Int64"
+        },
+        "dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "price": {
+          "$ref": "#/definitions/Int64"
+        },
+        "quantity": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareContent_t": {
+      "properties": {
+        "barcode": {
+          "$ref": "#/definitions/String"
+        },
+        "dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "ext": {
+          "$ref": "#/definitions/TareContentExt_t"
+        },
+        "ext_barcode": {
+          "$ref": "#/definitions/String"
+        },
+        "goods_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "nm_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "no_wb_sticker": {
+          "$ref": "#/definitions/Bool"
+        },
+        "sku_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "wbsticker_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareContentExt_t": {
+      "properties": {
+        "currency": {
+          "$ref": "#/definitions/Int64"
+        },
+        "entry": {
+          "$ref": "#/definitions/String"
+        },
+        "price": {
+          "$ref": "#/definitions/StringPrice"
+        },
+        "rid": {
+          "$ref": "#/definitions/String"
+        },
+        "user_shard_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareDeclaration_t": {
+      "properties": {
+        "dt": {
+          "$ref": "#/definitions/Time"
+        },
+        "employee_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "ext": {
+          "$ref": "#/definitions/TareDeclarationExt_t"
+        },
+        "is_tare_content_empty": {
+          "$ref": "#/definitions/Bool"
+        },
+        "lifecycle": {
+          "$ref": "#/definitions/String"
+        },
+        "lifecycle_dst": {
+          "$ref": "#/definitions/Int64"
+        },
+        "lifecycle_dst_type": {
+          "$ref": "#/definitions/String"
+        },
+        "lifecycle_dt": {
+          "$ref": "#/definitions/String"
+        },
+        "lifecycle_init": {
+          "$ref": "#/definitions/String"
+        },
+        "office_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "place_id": {
+          "$ref": "#/definitions/Int64"
+        },
+        "tare": {
+          "$ref": "#/definitions/Int64"
+        },
+        "tare_attachments": {
+          "items": {
+            "$ref": "#/definitions/TareAttachment_t"
+          },
+          "type": "array",
+          "x-go-name": "Tare_attachments"
+        },
+        "tare_content": {
+          "items": {
+            "$ref": "#/definitions/TareContent_t"
+          },
+          "type": "array",
+          "x-go-name": "Tare_content"
+        },
+        "tare_sticker": {
+          "$ref": "#/definitions/String"
+        },
+        "tare_type": {
+          "$ref": "#/definitions/String"
+        },
+        "wh_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareDeclarationExt_t": {
+      "properties": {
+        "sm_id": {
+          "$ref": "#/definitions/Int64"
+        }
+      },
+      "type": "object",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareDeclarationList_t": {
+      "items": {
+        "$ref": "#/definitions/TareDeclaration_t"
+      },
+      "type": "array",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "TareList_t": {
+      "items": {
+        "$ref": "#/definitions/Tare_t"
+      },
+      "type": "array",
+      "x-go-package": "sync-transfer-box/internal/models"
+    },
+    "Time": {
+      "type": "string",
+      "format": "date-time",
+      "x-go-package": "github.com/ondi/go-null"
+    }
+  },
+  "host": "sync-transfer-box.wildberries.ru",
+  "info": {
+    "description": "Апи синхронизации коробок",
+    "title": "sync-transfer-box",
+    "version": "0.0.70"
+  },
+  "paths": {
+    "/v1/sync/shks_processed": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "SyncShksProcessedV1",
+        "parameters": [
+          {
+            "description": "декларация",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShkProcessedV2List_t"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "https://wh-info.wildberries.ru/systems/wh-tare/tare_unpacking/",
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/v1/sync/tare": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "прибытие возвратной тары на склад",
+        "operationId": "SyncTareV1",
+        "parameters": [
+          {
+            "description": "максимальный объём 15мб",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TareList_t"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/v1/sync/tare_declaration": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "operationId": "SyncTareDeclarationV1",
+        "parameters": [
+          {
+            "description": "декларация",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TareDeclarationList_t"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "summary": "https://wh-info.wildberries.ru/systems/wh-tare/declaration/",
+        "tags": [
+          "web"
+        ]
+      }
+    },
+    "/v2/sync/box": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "отгрузки со склада на пвз",
+        "operationId": "SyncBoxV2",
+        "parameters": [
+          {
+            "description": "максимальный объём 15мб",
+            "in": "body",
+            "name": "Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BoxList_t"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "web"
+        ]
+      }
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {
+    "Bearer": {
+      "in": "header",
+      "name": "Authorization",
+      "type": "apiKey"
+    }
+  },
+  "swagger": "2.0"
+}
